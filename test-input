@@ -1,0 +1,29 @@
+=== RUN   TestAsString
+--- PASS: TestAsString (0.00s)
+=== RUN   TestTrackingSchemaTable
+Wanted 1
+=== RUN   TestTrackingSchemaTable/`foo`.xk-z
+Avoid 1
+=== RUN   TestTrackingSchemaTable/`foo.xk-z
+Avoid 2
+=== RUN   TestTrackingSchemaTable/foo
+Avoid 3
+=== RUN   TestTrackingSchemaTable/x.y.z
+Wanted 2
+=== RUN   TestTrackingSchemaTable/`x
+Avoid 4
+--- FAIL: TestTrackingSchemaTable (0.00s)
+    --- PASS: TestTrackingSchemaTable/`foo`.xk-z (0.00s)
+    --- PASS: TestTrackingSchemaTable/`foo.xk-z (0.00s)
+    --- PASS: TestTrackingSchemaTable/foo (0.00s)
+    --- FAIL: TestTrackingSchemaTable/x.y.z (0.00s)
+    --- PASS: TestTrackingSchemaTable/`x (0.00s)
+=== RUN   TestSingleStoreSkipFunctions
+    skip_test.go:20: Set $LIBSCHEMA_SINGLESTORE_TEST_DSN to test SingleStore support in libschema/lssinglestore
+--- SKIP: TestSingleStoreSkipFunctions (0.00s)
+PASS
+ok  	github.com/muir/libschema/lssinglestore	0.031s
+=== RUN   TestRandomString
+--- PASS: TestRandomString (0.00s)
+PASS
+ok  	github.com/muir/libschema/lstesting	0.035s
