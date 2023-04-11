@@ -1,4 +1,8 @@
-# testout
+# detangle_testing
+
+```sh
+go install github.com/muir/detangle_testing@latest
+```
 
 A tiny utility to process the output of Go tests to make it easier to see
 a linear flow of what contributed to a failed test.
