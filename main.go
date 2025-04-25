@@ -9,8 +9,9 @@ import (
 	"strings"
 )
 
-var resultRE = regexp.MustCompile(`^\s*--- (FAIL|SKIP|PASS): (Test\S+)`)
-var blockRE = regexp.MustCompile(`^=== [A-Z]+\s+(Test\S+)`)
+var lineStartRE = `^(?:\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7}Z )?`
+var resultRE = regexp.MustCompile(lineStartRE + `\s*--- (FAIL|SKIP|PASS): (Test\S+)`)
+var blockRE = regexp.MustCompile(lineStartRE + `=== [A-Z]+\s+(Test\S+)`)
 
 func main() {
 	var b []byte
